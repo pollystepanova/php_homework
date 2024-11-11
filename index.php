@@ -10,7 +10,8 @@ $currentDate = new DateTime();
 $year = $currentDate->format('Y');
 $birthdayDate = new DateTime("$year-$mybirthdayMonth-$mybirthdayDay");
 // Если день рождения уже прошел в этом году, устанавливаем следующий год
-if ($birthdayDate < $currentDate) {
+if ($birthdayDate < $currentDate) 
+{
     $birthdayDate->modify('+1 year');
 }
 // Рассчитываю разницу между текущей датой и следующим днем рождения
@@ -77,6 +78,32 @@ function FibonacciSeries(int $i)
     { 
         return FibonacciSeries($i - 1) + FibonacciSeries($i -2); 
     } 
-   } 
+} 
    // в функцию нужно ввести индекс числа Фибоначчи
    echo FibonacciSeries(10), PHP_EOL;
+
+   //6 ЗАДАНИЕ
+   //сортировку пузырьком)
+   function BubbleSort(array $array): array 
+   {
+        $length = count($array);
+        // Проходим по массиву столько раз, сколько элементов в массиве
+        for ($i = 0; $i < $length - 1; $i++) {
+            // Для каждого элемента проходим массив от начала до "последнего неотсортированного" элемента
+            for ($j = 0; $j < $length - $i - 1; $j++) 
+            {
+                // Если текущий элемент больше следующего, меняем их местами
+                if ($array[$j] > $array[$j + 1]) 
+                {
+                    $temp = $array[$j];
+                    $array[$j] = $array[$j + 1];
+                    $array[$j + 1] = $temp;
+                }
+            }
+        }
+        return $array;
+    }
+    
+    $array = [64, 34, 25, 12, 22, 11, 90];
+    $sortedArray = bubbleSort($array);
+    print_r($sortedArray);
