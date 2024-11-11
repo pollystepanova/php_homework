@@ -56,7 +56,7 @@ function CheckPalindrome(string $word)
     $invertedword = strrev($word);
     return $invertedword === $word;
 }
-var_dump(CheckPalindrome("слово"));
+var_dump(CheckPalindrome("word"));
 echo PHP_EOL;
-var_dump(CheckPalindrome("шалаш"));
+var_dump(CheckPalindrome("mem"));
 echo PHP_EOL;
