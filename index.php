@@ -36,12 +36,27 @@ OutputDateFormat();
 //[1,2,3,4,5] merge with [1,2,3,4,5,6,7] result = [1,2,3,4,5,6,7]
 function ArrayMergeAndDeleteSameElements(array $a, array $b)
 {
+    //функция объединения массивов
     $arraymerge = array_merge($a, $b);
+    //функция, которая оставледяет уникальные элементы
     $array_unique = array_unique($arraymerge);
     return $array_unique;
 }
 $array1 = [1,2,3,4,5];
 $array2 = [1,2,3,4,5,6,7];
 print_r(ArrayMergeAndDeleteSameElements($array1, $array2));
+echo PHP_EOL;
 
 //4 ЗАДАНИЕ
+//написать функцию которая проверяет ялвяется ли слово палиндромом
+
+function CheckPalindrome(string $word)
+{
+    // Приводим строку к нижнему регистру и убираем пробелы
+    $invertedword = strrev($word);
+    return $invertedword === $word;
+}
+var_dump(CheckPalindrome("слово"));
+echo PHP_EOL;
+var_dump(CheckPalindrome("шалаш"));
+echo PHP_EOL;
