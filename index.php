@@ -58,5 +58,25 @@ function CheckPalindrome(string $word)
 }
 var_dump(CheckPalindrome("word"));
 echo PHP_EOL;
-var_dump(CheckPalindrome("mem"));
+var_dump(CheckPalindrome("level"));
 echo PHP_EOL;
+
+//5 ЗАДАНИЕ
+//посчитать ряд фиббоначи
+function FibonacciSeries(int $i) 
+{ 
+    if ($i == 0 ) 
+    {
+        return 0;
+    } 
+    if ($i == 1 || $i == 2) 
+    { 
+        return 1; 
+    } 
+    else 
+    { 
+        return FibonacciSeries($i - 1) + FibonacciSeries($i -2); 
+    } 
+   } 
+   // в функцию нужно ввести индекс числа Фибоначчи
+   echo FibonacciSeries(10), PHP_EOL;
