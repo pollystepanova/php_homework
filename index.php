@@ -18,4 +18,17 @@ $interval = $currentDate->diff($birthdayDate);
 // Перевожу разницу в часы
 $hoursRemaining = ($interval->days * 24) + $interval->h;
 // Выводим результат
-echo "До моего дня рождения осталось $hoursRemaining часов.";
+echo "До моего дня рождения осталось $hoursRemaining часов.", PHP_EOL;
+
+//2 ЗАДАНИЕ
+//2013/09/01
+//13.09.01
+//01-09-13 написать функцию которая выводит текущую дату в таком формате
+function OutputDateFormat()
+{
+    $settime = new DateTime("2013-09-01");
+    echo $settime->format("d-m-y"), PHP_EOL;
+}
+OutputDateFormat();
+
+//3 ЗАДАНИЕ
