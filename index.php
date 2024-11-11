@@ -33,14 +33,15 @@ OutputDateFormat();
 
 //3 ЗАДАНИЕ
 //написать функцию которая соединяет два массива и оставляет в них только уникальные элементы
+//[1,2,3,4,5] merge with [1,2,3,4,5,6,7] result = [1,2,3,4,5,6,7]
 function ArrayMergeAndDeleteSameElements(array $a, array $b)
 {
     $arraymerge = array_merge($a, $b);
     $array_unique = array_unique($arraymerge);
     return $array_unique;
 }
-$array1 = [1,4,5,9,0];
-$array2 = [1,2,3,4,0];
+$array1 = [1,2,3,4,5];
+$array2 = [1,2,3,4,5,6,7];
 print_r(ArrayMergeAndDeleteSameElements($array1, $array2));
 
 //4 ЗАДАНИЕ
